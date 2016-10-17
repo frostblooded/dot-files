@@ -1,0 +1,124 @@
+let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
+argglobal
+let s:cpo_save=&cpo
+set cpo&vim
+cmap <buffer>  <Plug><cfile>
+cmap <buffer>  <Plug><cword>
+let &cpo=s:cpo_save
+unlet s:cpo_save
+setlocal keymap=
+setlocal noarabic
+setlocal noautoindent
+setlocal backupcopy=
+setlocal nobinary
+setlocal nobreakindent
+setlocal breakindentopt=
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal nocindent
+setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
+setlocal cinoptions=j1,J1
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=:#
+setlocal commentstring=<%#%s%>
+setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+setlocal conceallevel=0
+setlocal completefunc=youcompleteme#Complete
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal define=^\\s*def\\s\\+\\(self\\.\\)\\=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=%\\S%\\+\ \ %#%[cefi]%[rxod]%[eir]%[a-z]%#%\\x1b[0m\ %\\+%\\S%\\+%$%\\&%\\x1b%\\S%\\+\ \ %#%m%\\>%\\x1b[0m\ \ %#%f,%\\s\ %#%[cefi]%[rxod]%[eir]%[a-z]%#\ %\\+%\\S%\\+%$%\\&%\\s\ %#%m%\\>\ \ %#%f,Overwrite%.%#%\\S%\\+\ \ %#%m%\\x1b[0m\ \ %#%f,%-GOverwrite%.%#\"h\"%.%#,%.%#rails\ test\ %f:%l,%+GCurrent\ version:%.%#,%+G\ %#Status\ %#Migration\ ID%.%#,%+G\ The\ fixture\ ID\ for\ %.%#,%f:\ %s\ (%m)%$%\\&%.%#/fixtures/%.%#(%\\d%\\+),%+G\ %#Prefix\ %#Verb%.%#,%+G\ %#Code\ LOC:\ %.%#,%+GAbout\ your\ application's\ environment,%+Grun\ %\\S%#::Application.routes,%+Irails\ %\\S%\\+%\\s%\\+#\ %.%#,%+Eruby:%.%#(LoadError),%+EUsage:%.%#,%+ECould\ not\ find\ generator%.%#,%+EType\ 'rails'\ for\ help.,%D(in\ %f),%\\s%#from\ %f:%l:%m,%\\s%#from\ %f:%l:,%\\s%##\ %f:%l:%m,%\\s%##\ %f:%l,%\\s%#[%f:%l:\ %#%m,%\\s%#%f:%l:\ %#%m,%\\s%#%f:%l:,%m\ [%f:%l]:,%+Erake\ aborted!,%+EDon't\ know\ how\ to\ build\ task\ %.%#,%+Einvalid\ option:%.%#,%+Irake\ %\\S%\\+%\\s%\\+#\ %.%#,chdir\ /home/niki/Dropbox/Code/Rails/guard-duty-rails-app
+setlocal noexpandtab
+if &filetype != 'eruby'
+setlocal filetype=eruby
+endif
+setlocal fixendofline
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=20
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=syntax
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=croql
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal grepprg=
+setlocal iminsert=0
+setlocal imsearch=0
+setlocal include=^\\s*\\<\\(load\\>\\|require\\>\\|autoload\\s*:\\=[\"']\\=\\h\\w*[\"']\\=,\\)
+setlocal includeexpr=rails#includeexpr(v:fname)
+setlocal indentexpr=GetErubyIndent()
+setlocal indentkeys=o,O,*<Return>,<>>,{,},0),0],o,O,!^F,=end,=else,=elsif,=rescue,=ensure,=when
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=ri
+setlocal nolinebreak
+setlocal nolisp
+setlocal lispwords=
+setlocal nolist
+setlocal makeprg=bin/rake
+setlocal matchpairs=(:),{:},[:],<:>
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=bin,octal,hex
+setlocal nonumber
+setlocal numberwidth=4
+setlocal omnifunc=rubycomplete#Complete
+setlocal path=~/Dropbox/Code/Rails/guard-duty-rails-app/lib,~/Dropbox/Code/Rails/guard-duty-rails-app/vendor,~/Dropbox/Code/Rails/guard-duty-rails-app/app/models/concerns,~/Dropbox/Code/Rails/guard-duty-rails-app/app/controllers/concerns,~/Dropbox/Code/Rails/guard-duty-rails-app/app/controllers,~/Dropbox/Code/Rails/guard-duty-rails-app/app/helpers,~/Dropbox/Code/Rails/guard-duty-rails-app/app/mailers,~/Dropbox/Code/Rails/guard-duty-rails-app/app/models,~/Dropbox/Code/Rails/guard-duty-rails-app/app/jobs,~/Dropbox/Code/Rails/guard-duty-rails-app/app/*,~/Dropbox/Code/Rails/guard-duty-rails-app/app/views,~/Dropbox/Code/Rails/guard-duty-rails-app/app/views/static_pages,~/Dropbox/Code/Rails/guard-duty-rails-app/app/views/application,~/Dropbox/Code/Rails/guard-duty-rails-app/public,~/Dropbox/Code/Rails/guard-duty-rails-app/test,~/Dropbox/Code/Rails/guard-duty-rails-app/test/unit,~/Dropbox/Code/Rails/guard-duty-rails-app/test/functional,~/Dropbox/Code/Rails/guard-duty-rails-app/test/integration,~/Dropbox/Code/Rails/guard-duty-rails-app/test/controllers,~/Dropbox/Code/Rails/guard-duty-rails-app/test/helpers,~/Dropbox/Code/Rails/guard-duty-rails-app/test/mailers,~/Dropbox/Code/Rails/guard-duty-rails-app/test/models,~/Dropbox/Code/Rails/guard-duty-rails-app/test/jobs,~/Dropbox/Code/Rails/guard-duty-rails-app/vendor/plugins/*/lib,~/Dropbox/Code/Rails/guard-duty-rails-app/vendor/plugins/*/test,~/Dropbox/Code/Rails/guard-duty-rails-app/vendor/rails/*/lib,~/Dropbox/Code/Rails/guard-duty-rails-app/vendor/rails/*/test,~/Dropbox/Code/Rails/guard-duty-rails-app,~/.rvm/rubies/ruby-2.3.1/lib/ruby/site_ruby/2.3.0,~/.rvm/rubies/ruby-2.3.1/lib/ruby/site_ruby/2.3.0/x86_64-linux,~/.rvm/rubies/ruby-2.3.1/lib/ruby/site_ruby,~/.rvm/rubies/ruby-2.3.1/lib/ruby/vendor_ruby/2.3.0,~/.rvm/rubies/ruby-2.3.1/lib/ruby/vendor_ruby/2.3.0/x86_64-linux,~/.rvm/rubies/ruby-2.3.1/lib/ruby/vendor_ruby,~/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0,~/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/x86_64-linux,~/.rvm/gems/ruby-2.3.1/gems/actioncable-5.0.0.1/lib,~/.rvm/gems/ruby-2.3.1/gems/actionmailer-5.0.0.1/lib,~/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib,~/.rvm/gems/ruby-2.3.1/gems/actionview-5.0.0.1/lib,~/.rvm/gems/ruby-2.3.1/gems/activejob-5.0.0.1/lib,~/.rvm/gems/ruby-2.3.1/gems/activemodel-5.0.0.1/lib,~/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.1/lib,~/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib,~/.rvm/gems/ruby-2.3.1/gems/addressable-2.4.0/lib,~/.rvm/gems/ruby-2.3.1/gems/airbrussh-1.1.1/lib,~/.rvm/gems/ruby-2.3.1/gems/ansi-1.5.0/lib,~/.rvm/gems/ruby-2.3.1/gems/arel-7.1.1/lib,~/.rvm/gems/ruby-2.3.1/gems/ast-2.3.0/lib,~/.rvm/gems/ruby-2.3.1/gems/axiom-types-0.1.1/lib,~/.rvm/gems/ruby-2.3.1/gems/bcrypt-3.1.11/lib,~/.rvm/gems/ruby-2.3.1/gems/bootstrap-sass-3.2.0.2/lib,~/.rvm/gems/ruby-2.3.1/gems/builder-3.2.2/lib,~/.rvm/gems/ruby-2.3.1/gems/byebug-3.4.2/lib,~/.rvm/gems/ruby-2.3.1/gems/cancancan-1.15.0/lib,~/.rvm/gems/ruby-2.3.1/gems/capistrano-3.6.1/lib,~/.rvm/gems/ruby-2.3.1/gems/capistrano-bundler-1.1.4/lib,~/.rvm/gems/ruby-2.3.1/gems/capistrano-faster-assets-1.0.2/lib,~/.rvm/gems/ruby-2.3.1/gems/capistrano-figaro-yml-1.0.4/lib,~/.rvm/gems/ruby-2.3.1/gems/capistrano-harrow-0.5.3/lib,~/.rvm/gems/ruby-2.3.1/gems/capistrano-passenger-0.2.0/lib,~/.rvm/gems/ruby-2.3.1/gems/capistrano-rails-1.1.7/lib,~/.rvm/gems/ruby-2.3.1/gems/capistrano-rails-db-0.0.2/lib,~/.rvm/gems/ruby-2.3.1/gems/capistrano-rvm-0.1.2/lib,~/.rvm/gems/ruby-2.3.1/gems/capybara-2.8.1/lib,~/.rvm/gems/ruby-2.3.1/gems/chronic-0.10.2/lib,~/.rvm/gems/ruby-2.3.1/gems/cliver-0.3.2/lib,~/.rvm/gems/ruby-2.3.1/gems/coercible-1.0.0/lib,~/.rvm/gems/ruby-2.3.1/gems/coffee-rails-4.2.1/lib,~/.rvm/gems/ruby-2.3.1/gems/coffee-script-2.4.1/lib,~/.rvm/gems/ruby-2.3.1/gems/coffee-script-source-1.10.0/lib,~/.rvm/gems/ruby-2.3.1/gems/columnize-0.9.0/lib,~/.rvm/gems/ruby-2.3.1/gems/concurrent-ruby-1.0.2/lib,~/.rvm/gems/ruby-2.3.1/gems/css_parser-1.4.5/lib,~/.rvm/gems/ruby-2.3.1/gems/debug_inspector-0.0.2/lib,~/.rvm/gems/ruby-2.3.1/gems/debugger-linecache-1.2.0/lib,~/.rvm/gems/ruby-2.3.1/gems/descendants_tracker-0.0.4/lib,~/.rvm/gems/ru
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal relativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal shiftwidth=4
+setlocal noshortname
+setlocal signcolumn=auto
+setlocal nosmartindent
+setlocal softtabstop=0
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=%!airline#statusline(2)
+setlocal suffixesadd=.rb
+setlocal swapfile
+setlocal synmaxcol=3000
+if &syntax != 'eruby'
+setlocal syntax=eruby
+endif
+setlocal tabstop=4
+setlocal tagcase=
+setlocal tags=~/Dropbox/Code/Rails/guard-duty-rails-app/tags,~/Dropbox/Code/Rails/guard-duty-rails-app/tmp/tags,./tags,./TAGS,tags,TAGS,~/.rvm/rubies/ruby-2.3.1/lib/ruby/site_ruby/2.3.0/tags,~/.rvm/rubies/ruby-2.3.1/lib/ruby/site_ruby/2.3.0/x86_64-linux/tags,~/.rvm/rubies/ruby-2.3.1/lib/ruby/site_ruby/tags,~/.rvm/rubies/ruby-2.3.1/lib/ruby/vendor_ruby/2.3.0/tags,~/.rvm/rubies/ruby-2.3.1/lib/ruby/vendor_ruby/2.3.0/x86_64-linux/tags,~/.rvm/rubies/ruby-2.3.1/lib/ruby/vendor_ruby/tags,~/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/tags,~/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/x86_64-linux/tags,~/.rvm/gems/ruby-2.3.1/gems/actioncable-5.0.0.1/tags,~/.rvm/gems/ruby-2.3.1/gems/actionmailer-5.0.0.1/tags,~/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/tags,~/.rvm/gems/ruby-2.3.1/gems/actionview-5.0.0.1/tags,~/.rvm/gems/ruby-2.3.1/gems/activejob-5.0.0.1/tags,~/.rvm/gems/ruby-2.3.1/gems/activemodel-5.0.0.1/tags,~/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.1/tags,~/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/tags,~/.rvm/gems/ruby-2.3.1/gems/addressable-2.4.0/tags,~/.rvm/gems/ruby-2.3.1/gems/airbrussh-1.1.1/tags,~/.rvm/gems/ruby-2.3.1/gems/ansi-1.5.0/tags,~/.rvm/gems/ruby-2.3.1/gems/arel-7.1.1/tags,~/.rvm/gems/ruby-2.3.1/gems/ast-2.3.0/tags,~/.rvm/gems/ruby-2.3.1/gems/axiom-types-0.1.1/tags,~/.rvm/gems/ruby-2.3.1/gems/bcrypt-3.1.11/tags,~/.rvm/gems/ruby-2.3.1/gems/bootstrap-sass-3.2.0.2/tags,~/.rvm/gems/ruby-2.3.1/gems/builder-3.2.2/tags,~/.rvm/gems/ruby-2.3.1/gems/byebug-3.4.2/tags,~/.rvm/gems/ruby-2.3.1/gems/cancancan-1.15.0/tags,~/.rvm/gems/ruby-2.3.1/gems/capistrano-3.6.1/tags,~/.rvm/gems/ruby-2.3.1/gems/capistrano-bundler-1.1.4/tags,~/.rvm/gems/ruby-2.3.1/gems/capistrano-faster-assets-1.0.2/tags,~/.rvm/gems/ruby-2.3.1/gems/capistrano-figaro-yml-1.0.4/tags,~/.rvm/gems/ruby-2.3.1/gems/capistrano-harrow-0.5.3/tags,~/.rvm/gems/ruby-2.3.1/gems/capistrano-passenger-0.2.0/tags,~/.rvm/gems/ruby-2.3.1/gems/capistrano-rails-1.1.7/tags,~/.rvm/gems/ruby-2.3.1/gems/capistrano-rails-db-0.0.2/tags,~/.rvm/gems/ruby-2.3.1/gems/capistrano-rvm-0.1.2/tags,~/.rvm/gems/ruby-2.3.1/gems/capybara-2.8.1/tags,~/.rvm/gems/ruby-2.3.1/gems/chronic-0.10.2/tags,~/.rvm/gems/ruby-2.3.1/gems/cliver-0.3.2/tags,~/.rvm/gems/ruby-2.3.1/gems/coercible-1.0.0/tags,~/.rvm/gems/ruby-2.3.1/gems/coffee-rails-4.2.1/tags,~/.rvm/gems/ruby-2.3.1/gems/coffee-script-2.4.1/tags,~/.rvm/gems/ruby-2.3.1/gems/coffee-script-source-1.10.0/tags,~/.rvm/gems/ruby-2.3.1/gems/columnize-0.9.0/tags,~/.rvm/gems/ruby-2.3.1/gems/concurrent-ruby-1.0.2/tags,~/.rvm/gems/ruby-2.3.1/gems/css_parser-1.4.5/tags,~/.rvm/gems/ruby-2.3.1/gems/debug_inspector-0.0.2/tags,~/.rvm/gems/ruby-2.3.1/gems/debugger-linecache-1.2.0/tags,~/.rvm/gems/ruby-2.3.1/gems/descendants_tracker-0.0.4/tags,~/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/tags,~/.rvm/gems/ruby-2.3.1/gems/devise-i18n-1.1.0/tags,~/.rvm/gems/ruby-2.3.1/gems/docile-1.1.5/tags,~/.rvm/gems/ruby-2.3.1/gems/enumerable-lazy-0.0.1/tags,~/.rvm/gems/ruby-2.3.1/gems/equalizer-0.0.11/tags,~/.rvm/gems/ruby-2.3.1/gems/erubis-2.7.0/tags,~/.rvm/gems/ruby-2.3.1/gems/exception_notification-4.2.1/tags,~/.rvm/gems/ruby-2.3.1/gems/execjs-2.7.0/tags,~/.rvm/gems/ruby-2.3.1/gems/factory_girl-4.7.0/tags,~/.rvm/gems/ruby-2.3.1/gems/factory_girl_rails-4.7.0/tags,~/.rvm/gems/ruby-2.3.1/gems/faker-1.6.6/tags,~/.rvm/gems/ruby-2.3.1/gems/figaro-1.1.1/tags,~/.rvm/gems/ruby-2.3.1/gems/globalid-0.3.7/tags,~/.rvm/gems/ruby-2.3.1/gems/grape-0.16.2/tags,~/.rvm/gems/ruby-2.3.1/gems/grape-cancan-0.0.2/tags,~/.rvm/gems/ruby-2.3.1/gems/grape_on_rails_routes-0.3.1/tags,~/.rvm/gems/ruby-2.3.1/gems/hashie-3.4.4/tags,~/.rvm/gems/ruby-2.3.1/gems/htmlentities-4.3.4/tags,~/.rvm/gems/ruby-2.3.1/gems/i18n-0.7.0/tags,~/.rvm/gems/ruby-2.3.1/gems/i18n-js-2.1.2/tags,~/.rvm/gems/ruby-2.3.1/gems/ice_nine-0.11.2/tags,~/.rvm/gems/ruby-2.3.1/gems/jquery-rails-4.2.1/tags,~/.rvm/gems/ruby-2.3.1/gems/jquery-ui-rails-5.0.5/tags,~/.rvm/gems/ruby-2.3.1/gems/loofah-2.0.3/tags,~/.rvm/gems/ruby-2.3.1/gems/mail-2.6.4/tags,~/.rvm/gems/ruby-2.3.1/gems/method_source-0.8.2/tags,~/.rvm/gems/ruby-2.3.1/gems/mime-types-3.1/tags,~/.rvm/gems/ruby-2.3
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal noundofile
+setlocal undolevels=-123456
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal wrap
+setlocal wrapmargin=0
+let s:l = 1 - ((0 * winheight(0) + 19) / 39)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
+let &so = s:so_save | let &siso = s:siso_save
+doautoall SessionLoadPost
+" vim: set ft=vim :
